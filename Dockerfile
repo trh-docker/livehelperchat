@@ -1,4 +1,5 @@
 FROM quay.io/spivegin/php7
+
 ADD files/Caddy/Caddyfile /opt/caddy/
 WORKDIR /opt/tlm/html
 
