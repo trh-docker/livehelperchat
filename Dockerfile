@@ -5,7 +5,8 @@ ADD files/php/ /etc/php/7.0/fpm/pool.d/
 
 WORKDIR /opt/tlm/html
 
-RUN git clone https://github.com/LiveHelperChat/livehelperchat.git .
+RUN git clone https://github.com/LiveHelperChat/livehelperchat.git . &&\
+    chown -R www-data:www-data .
 
 EXPOSE 80
 
