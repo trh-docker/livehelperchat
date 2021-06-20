@@ -1,3 +1,3 @@
 git add -A
-git commit -m "updated php to 7.1.3"
+git commit -m "updated caddy 2 caddfile change"
 git push

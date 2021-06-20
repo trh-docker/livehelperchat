@@ -1,7 +1,5 @@
 0.0.0.0:80 {
     import sites-enabled/*
-    root /opt/tlm/html/lhc_web
-    php_fastcgi unix//run/php/php7.1-fpm.sock {
-        rewrite * /index.php?{query}&p={path}
-    }
+    root * /opt/tlm/html/lhc_web
+    php_fastcgi unix//run/php/php7.1-fpm.sock 
 }
