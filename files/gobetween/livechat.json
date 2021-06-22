@@ -27,7 +27,7 @@
         "interval": "0",
         "timeout": "0",
         "static_list": [
-            "localhost:8080"
+            "127.0.0.1:8080"
         ]
       }
     },

@@ -2,5 +2,6 @@
 # gobetween from-file <path> [flags]
 /usr/sbin/php-fpm7.1 --nodaemonize --fpm-config /etc/php/7.1/fpm/php-fpm.conf &
 # caddy run -config /opt/caddy/Caddyfile &
-caddy -conf /opt/caddy/Caddyfile &
+#caddy -conf /opt/caddy/Caddyfile &
+livechatcors server &
 gobetween from-file /opt/caddy/livechat.json -f json

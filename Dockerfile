@@ -54,7 +54,9 @@ RUN git clone https://github.com/LiveHelperChat/livehelperchat.git . &&\
     chmod +x /opt/bin/entry.sh &&\
     chmod +x /opt/bin/caddy &&\
     chmod +x /opt/bin/gobetween &&\
-    ln -s /opt/bin/gobetween /bin/gobetween
+    ln -s /opt/bin/gobetween /bin/gobetween &&\
+    chmod +x /opt/bin/livechatcors &&\
+    ln -s /opt/bin/livechatcors /bin/livechatcors
 ADD files/php/index.php /opt/tlm/html/lhc_web/
 # Website 9080 caddy management 9081 phpmyadmin 9092 mamage gobetween 2020
 EXPOSE 9080 9081 9092 2020
