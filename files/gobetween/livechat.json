@@ -6,7 +6,7 @@
   },
   "api": {
     "enabled": true,
-    "bind": "0.0.0.0:2019",
+    "bind": "0.0.0.0:2020",
     "cors": false
   },
   "servers": {
