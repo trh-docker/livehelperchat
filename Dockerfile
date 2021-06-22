@@ -28,8 +28,6 @@ RUN git config --global url.git@github.com:.insteadOf https://github.com/ &&\
 
 RUN git clone https://sc.tpnfc.us/Misc/livechatcors.git &&\
     cd livechatcors &&\
-    go mod tidy &&\
-    go mod vendor &&\
     go build -o /opt/livechatcors livechatcors/main.go
 
 # FROM quay.io/spivegin/caddy_only:caddy2 AS caddy
