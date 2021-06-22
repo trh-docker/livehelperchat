@@ -4,8 +4,8 @@
         header @origin Access-Control-Request-Method GET
 }
 
-0.0.0.0:80 {
+localhost:8080 {
     root * /opt/tlm/html/lhc_web
-    import cors 0.0.0.0
+    import cors localhost
     php_fastcgi unix//run/php/php7.1-fpm.sock 
 }

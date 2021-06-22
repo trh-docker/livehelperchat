@@ -1,0 +1,35 @@
+{
+  "logging": {
+    "level": "info",
+    "output": "/root/log.json",
+    "format": "json"
+  },
+  "api": {
+    "enabled": true,
+    "bind": "0.0.0.0:2019",
+    "cors": false
+  },
+  "servers": {
+    "chat": {
+      "max_connections": 1000,
+      "client_idle_timeout": "10m",
+      "backend_idle_timeout": "10m",
+      "backend_connection_timeout": "5s",
+      "bind": "0.0.0.0:80",
+      "protocol": "tcp",
+      "balance": "iphash",
+      "access": {
+        "default": "allow"
+      },
+      "discovery": {
+        "kind": "static",
+        "failpolicy": "keeplast",
+        "interval": "0",
+        "timeout": "0",
+        "static_list": [
+            "localhost:8080",
+        ]
+      }
+    }
+  }
+}
