@@ -30,6 +30,27 @@
             "localhost:8080"
         ]
       }
+    },
+    "caddy_api": {
+      "max_connections": 1000,
+      "client_idle_timeout": "10m",
+      "backend_idle_timeout": "10m",
+      "backend_connection_timeout": "5s",
+      "bind": "0.0.0.0:80",
+      "protocol": "tcp",
+      "balance": "iphash",
+      "access": {
+        "default": "allow"
+      },
+      "discovery": {
+        "kind": "static",
+        "failpolicy": "keeplast",
+        "interval": "0",
+        "timeout": "0",
+        "static_list": [
+            "localhost:2019"
+        ]
+      }
     }
   }
 }

@@ -19,7 +19,8 @@ RUN git clone https://github.com/LiveHelperChat/livehelperchat.git . &&\
     chown -R www-data:www-data . &&\
     chmod +x /opt/bin/entry.sh &&\
     chmod +x /opt/bin/caddy &&\
-    chmod +x /opt/bin/gobetween && ln -s /opt/bin/gobetween /bin/gobetween
+    chmod +x /opt/bin/gobetween &&\
+    ln -s /opt/bin/gobetween /bin/gobetween
 
 EXPOSE 80
 
