@@ -22,7 +22,7 @@ RUN git clone https://github.com/LiveHelperChat/livehelperchat.git . &&\
     chmod +x /opt/bin/gobetween &&\
     ln -s /opt/bin/gobetween /bin/gobetween
 
-EXPOSE 80
+EXPOSE 80 2019
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["/opt/bin/entry.sh"]
