@@ -27,7 +27,7 @@ RUN git config --global url.git@github.com:.insteadOf https://github.com/ &&\
     git config --global url."https://${deploy}@sc.tpnfc.us/".insteadOf "https://sc.tpnfc.us/"
 
 RUN git clone https://sc.tpnfc.us/Misc/livechatcors.git &&\
-    cd /opt/src/src/sc.tpnfc.us/Misc/livechatcors &&\
+    cd livechatcors &&\
     go mod vendor &&\
     go build -o /opt/livechatcors livechatcors/main.go
 
