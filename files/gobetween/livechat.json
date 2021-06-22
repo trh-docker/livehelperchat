@@ -36,7 +36,7 @@
       "client_idle_timeout": "10m",
       "backend_idle_timeout": "10m",
       "backend_connection_timeout": "5s",
-      "bind": "0.0.0.0:2019",
+      "bind": "0.0.0.0:81",
       "protocol": "tcp",
       "balance": "iphash",
       "access": {

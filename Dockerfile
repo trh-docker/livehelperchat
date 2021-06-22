@@ -21,8 +21,8 @@ RUN git clone https://github.com/LiveHelperChat/livehelperchat.git . &&\
     chmod +x /opt/bin/caddy &&\
     chmod +x /opt/bin/gobetween &&\
     ln -s /opt/bin/gobetween /bin/gobetween
-
-EXPOSE 80 2019
+# Website 80 caddy management 81
+EXPOSE 80 81
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["/opt/bin/entry.sh"]
