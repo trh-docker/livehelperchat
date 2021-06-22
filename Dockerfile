@@ -1,7 +1,7 @@
 FROM quay.io/spivegin/caddy_only:caddy2 AS caddy
 FROM quay.io/spivegin/gobetween:latest AS gobetween
-FROM quay.io/spivegin/php7:7.1.3
 
+FROM quay.io/spivegin/php7:7.1.3
 ADD files/Caddy/Caddyfile /opt/caddy/
 ADD files/gobetween/livechat.json /opt/caddy/
 ADD files/php/ /etc/php/7.1/fpm/pool.d/
