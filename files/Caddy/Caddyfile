@@ -1,11 +1,15 @@
-(cors) {
-        @origin header Origin {args.0}
-        header @origin Access-Control-Allow-Origin "{args.0}"
-        header @origin Access-Control-Request-Method GET
-}
+0.0.0.0:8080 {
+    tls off
+    root /opt/tlm/html/lhc_web
+    header / {
+        Host {host}
+        X-Real-IP {remote}
+        X-Forwarded-For {remote}
+        X-Forwarded-Port {server_port}
+        X-Forwarded-Proto {scheme}
+    }
 
-http://localhost:8080 {
-    root * /opt/tlm/html/lhc_web
-    import cors localhost
-    php_fastcgi unix//run/php/php7.1-fpm.sock 
+    fastcgi / /run/php/php7.1-fpm.sock php {
+        index index.php
+    }
 }
