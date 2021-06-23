@@ -1,4 +1,4 @@
-0.0.0.0:9000 {
+0.0.0.0:8080 {
     tls off
     root /opt/tlm/html/lhc_web
     header / {
