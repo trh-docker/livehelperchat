@@ -41,7 +41,7 @@ WORKDIR /opt/tlm/html
 # COPY --from=caddy /opt/bin/caddy  /opt/bin/caddy 
 COPY --from=gobetween /opt/bin/gobetween  /opt/bin/gobetween 
 COPY --from=builder /opt/livechatcors  /opt/bin/livechatcors 
-RUN rm /etc/apt/source.list.d/php.list &&\
+RUN rm /etc/apt/sources.list.d/php.list &&\
     apt update && apt upgrade -y &&\
     apt install -y nano lsof socat iftop &&\
     apt-get autoremove && apt-get autoclean &&\
