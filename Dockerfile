@@ -1,15 +1,15 @@
 FROM quay.io/spivegin/livechatcors:latest AS livechatcors
 FROM quay.io/spivegin/gobetween:latest AS gobetween
-FROM quay.io/spivegin/caddy_only:caddy2 AS caddy
+# FROM quay.io/spivegin/caddy_only:caddy2 AS caddy
 
 FROM quay.io/spivegin/php7:7.1.3
 ADD files/gobetween/livechat.json /opt/caddy/
 ADD files/php/www.conf /etc/php/7.1/fpm/pool.d/
 ADD files/bash/entry.sh /opt/bin/entry.sh
 WORKDIR /opt/tlm/html
-# ADD files/Caddy/Caddyfile /opt/caddy/Caddyfile
-ADD files/Caddy/Caddyfile.caddy2 /opt/caddy/Caddyfile
-COPY --from=caddy /opt/bin/caddy  /opt/bin/caddy 
+ADD files/Caddy/Caddyfile /opt/caddy/Caddyfile
+# ADD files/Caddy/Caddyfile.caddy2 /opt/caddy/Caddyfile
+# COPY --from=caddy /opt/bin/caddy  /opt/bin/caddy 
 COPY --from=gobetween /opt/bin/gobetween  /opt/bin/gobetween 
 COPY --from=livechatcors /opt/bin/livechatcors  /opt/bin/livechatcors 
 RUN rm /etc/apt/sources.list.d/php.list &&\
