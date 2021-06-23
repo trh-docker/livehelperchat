@@ -9,7 +9,7 @@ ADD files/bash/entry.sh /opt/bin/entry.sh
 WORKDIR /opt/tlm/html
 # COPY --from=caddy /opt/bin/caddy  /opt/bin/caddy 
 COPY --from=gobetween /opt/bin/gobetween  /opt/bin/gobetween 
-COPY --from=livechatcors /opt/livechatcors  /opt/bin/livechatcors 
+COPY --from=livechatcors /opt/bin/livechatcors  /opt/bin/livechatcors 
 RUN rm /etc/apt/sources.list.d/php.list &&\
     apt update && apt upgrade -y &&\
     apt install -y nano lsof socat iftop &&\
